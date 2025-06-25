@@ -33,9 +33,7 @@ No bloat. No tracking. Just a single click to preserve a web page forever or byp
 
 ### 🔗 Chrome Web Store
 
-> [📦 Archive This! on the Chrome Web Store](https://chrome.google.com/webstore/detail/ARCHIVE_ID_HERE)
-
-_Note to self: Replace `ARCHIVE_ID_HERE` when it's live._
+> [📦 Archive This! on the Chrome Web Store](https://chromewebstore.google.com/detail/archive-this/kjikkoaceomhbldilpnmfoadoebhaicp)
 
 ---
 
