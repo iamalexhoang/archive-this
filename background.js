@@ -43,7 +43,7 @@ function cleanPageUrl(rawUrl) {
 }
 
 function newestArchiveUrl(pageUrl) {
-  return `https://archive.ph/newest/${pageUrl}`;
+  return `https://archive.is/newest/${pageUrl}`;
 }
 
 chrome.action.onClicked.addListener((tab) => {
