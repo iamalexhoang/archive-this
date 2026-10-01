@@ -1,5 +1,7 @@
-// Archive This!
+// Archive This! — v1.1.1
 // One click -> newest public Archive.today snapshot.
+
+const ARCHIVE_BASE = "https://archive.is";
 
 const TRACKING_PARAMS = new Set([
   "fbclid",
@@ -22,12 +24,11 @@ function cleanPageUrl(rawUrl) {
       return null;
     }
 
-    // Fragments are not sent to the web server and usually only reduce
-    // the chance of matching an existing archived snapshot.
+    // Fragments are client-side only and can prevent a clean archive match.
     url.hash = "";
 
-    // Remove only high-confidence tracking parameters. Preserve all other
-    // query parameters because they may identify the actual article/page.
+    // Remove only high-confidence tracking parameters. Preserve all others
+    // because query parameters can be part of the page's actual identity.
     for (const key of [...url.searchParams.keys()]) {
       const normalized = key.toLowerCase();
 
@@ -43,7 +44,7 @@ function cleanPageUrl(rawUrl) {
 }
 
 function newestArchiveUrl(pageUrl) {
-  return `https://archive.is/newest/${pageUrl}`;
+  return `${ARCHIVE_BASE}/newest/${pageUrl}`;
 }
 
 chrome.action.onClicked.addListener((tab) => {
