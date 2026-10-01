@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Archive This!",
-  "version": "1.0",
-  "description": "Quickly archive the current tab using archive.is.",
+  "version": "1.1.0",
+  "description": "Open the newest publicly archived version of the current page with one click.",
   "author": "Alex Hoang",
-  "permissions": ["tabs", "activeTab"],
+  "permissions": ["activeTab"],
   "action": {
     "default_title": "Archive This!",
     "default_icon": {
